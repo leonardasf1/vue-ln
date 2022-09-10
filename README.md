@@ -1,4 +1,9 @@
-# vue3
+### Todo
+- добавить методы в авторизацию.
+- переключить с jsonplaceholder на firebase.
+
+### vue3 test project
+[vue-ln.web.app](https://vue-ln.web.app/)
 
 ## Project setup
 ```
