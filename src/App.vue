@@ -23,7 +23,7 @@
 body {
   font: 16px/1.5 normal normal;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 300;
+  /* font-weight: 300; */
   color: #efdab9;
   text-align: center;
   background: #343233;

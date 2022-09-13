@@ -1,34 +1,33 @@
 <template>
   <div class="block__content">
-    <form class="form" id="signup-form"
-      @submit.prevent
-      :submit="(e) => signupFormHandler(e, router)">
+    <form class="form" id="signup-form" @submit="signupFormHandler">
       <div class="form__group">
         <h3>Регистрация</h3>
         <div>
           <div class="textfield--float-label">
             <span class="error"></span>
-            <input type="text" required name="name" id="name" :blur="(e) => validAuth(e)" />
+            <input type="text" required name="name" id="name" @blur="validAuth" />
             <label>Имя</label>
           </div>
           <div class="textfield--float-label">
             <span class="error"></span>
-            <input type="email" required name="email" id="signEmail" :blur="(e) => validAuth(e)" />
+            <input type="email" required name="email" id="signEmail" @blur="validAuth" />
             <label>Электронный адрес</label>
           </div>
           <div class="textfield--float-label">
             <span class="error"></span>
-            <input type="password" required name="password" id="pas" :blur="(e) => validAuth(e)" />
+            <input type="password" required name="password" id="pas" @blur="validAuth" />
             <label>Придумайте пароль</label>
           </div>
           <div class="textfield--float-label">
             <span class="error"></span>
-            <input type="password" required name="password_2" id="pas2" :blur="(e) => validAuth(e)" />
+            <input type="password" required name="password_2" id="pas2" @blur="validAuth" />
             <label>Повторите пароль</label>
           </div>
           <div class="textfield--float-label">
             <span class="error"></span>
-            <input type="tel" name="tel" id="tel" :blur="(e) => validAuth(e)" />
+            <input
+              type="tel" name="tel" id="tel" @blur="validAuth" />
             <label>Номер мобильного телефона</label>
           </div>
         </div>
@@ -50,12 +49,17 @@
 </template>
 
 <script>
+import { signupFormHandler, validAuth } from './script.js'
 
 export default {
   data() {
     return {
 
     }
+  },
+  methods: {
+    signupFormHandler(e) { signupFormHandler(e) },
+    validAuth(e) { validAuth(e) }
   }
 }
 </script>

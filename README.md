@@ -1,6 +1,5 @@
 ### Todo
-- добавить методы в авторизацию.
-- переключить с jsonplaceholder на firebase.
+- переключить Публикации с jsonplaceholder на firebase.
 
 ### vue3 test project
 [vue-ln.web.app](https://vue-ln.web.app/)

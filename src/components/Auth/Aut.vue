@@ -1,19 +1,17 @@
 <template>
   <div class="block__content">
-    <form class="form"
-      @submit.prevent
-      :submit="(e) => loginFormHandler(e, router)">
+    <form class="form" @submit="loginFormHandler">
       <div class="form__group">
         <h3>Вход</h3>
         <div>
           <div class="textfield--float-label">
             <span class="error"></span>
-            <input type="email" id="email" :blur="(e) => validAuth(e)" required />
+            <input type="email" id="email" @blur="validAuth" required />
           <label>Введите почту</label>
           </div>
           <div class="textfield--float-label">
             <span class="error"></span>
-            <input type="password" id="password" :blur="(e) => validAuth(e)" required />
+            <input type="password" id="password" @blur="validAuth" required />
             <label>Введите пароль</label>
           </div>
         </div>
@@ -31,11 +29,17 @@
 </template>
 
 <script>
+import { loginFormHandler, validAuth } from './script.js'
+
 export default {
   data() {
     return {
 
     }
+  },
+  methods: {
+    loginFormHandler(e) { loginFormHandler(e) },
+    validAuth(e) { validAuth(e) }
   }
 }
 </script>
@@ -45,6 +49,7 @@ export default {
     color: #f95b5b;
     right: 16px;
     position: absolute;
+    top: 29px;
 }
 
 .block__content {

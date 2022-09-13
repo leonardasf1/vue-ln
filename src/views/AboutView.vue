@@ -1,8 +1,6 @@
 <template>
   <div class="about">
     <h1>{{title}}</h1>
-    <my-button @click="">1</my-button>
-    <my-button @click="">2</my-button>
     <List :people="people" @message="displayMessage"/>
   </div>
 </template>

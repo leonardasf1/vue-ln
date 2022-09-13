@@ -3,10 +3,13 @@ node_modules
 /dist
 store
 pages
+.firebase
 
 # local env files
 .env.local
 .env.*.local
+.firebaserc
+firebase.json
 
 # Log files
 npm-debug.log*
@@ -22,3 +25,5 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+src/components/Auth/rest.js
